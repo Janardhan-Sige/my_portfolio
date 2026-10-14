@@ -114,12 +114,11 @@ export default function Hero() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </a>
               <a
-                href={`${assetBase}/Janardhan-Resume.pdf`}
-                download
+                href={process.env.NEXT_PUBLIC_RESUME_URL || "#contact"}
                 className="inline-flex items-center gap-3 rounded-full border-2 border-white/80 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-7"
               >
                 <Download size={18} aria-hidden="true" />
-                Download Resume
+                {process.env.NEXT_PUBLIC_RESUME_URL ? "View Resume" : "Request Resume"}
               </a>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium text-white/85 sm:text-sm">
@@ -162,6 +161,14 @@ export default function Hero() {
                     playsInline
                     muted={muted}
                     onClick={toggleAudio}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        toggleAudio();
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
                     title={muted ? "Tap the video to enable audio" : "Tap the video to mute audio"}
                     aria-label={muted ? "Animated portrait video, muted. Activate to enable audio." : "Animated portrait video, sound enabled. Activate to mute audio."}
                     className="h-full w-full cursor-pointer object-contain"
