@@ -34,6 +34,8 @@ const projects = [
     ],
     technologies: ["Airflow", "Cloud Composer", "Python", "BigQuery SQL"],
     icon: GitBranch,
+    href: undefined,
+    linkLabel: undefined,
   },
   {
     number: "03",
@@ -47,6 +49,8 @@ const projects = [
     ],
     technologies: ["BigQuery", "SQL", "Looker Studio", "Power BI"],
     icon: BrainCircuit,
+    href: undefined,
+    linkLabel: undefined,
   },
 ];
 
