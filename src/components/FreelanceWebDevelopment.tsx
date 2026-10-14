@@ -20,6 +20,7 @@ const projects = [
     description:
       "A responsive business website concept focused on presenting services clearly and helping visitors make contact.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: undefined,
   },
   {
     number: "03",
@@ -37,6 +38,7 @@ const projects = [
     description:
       "A responsive agency website concept emphasizing service information, clear navigation, and enquiry paths.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+    link: undefined,
   },
 ];
 
